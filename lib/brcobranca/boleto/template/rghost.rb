@@ -126,7 +126,7 @@ module Brcobranca
 
           doc.define_tags do
             tag :grande, :size => 13
-            tag :bold, :name => 'TimesBold', :size => 9 
+            tag :bold, :name => 'TimesBold', :size => 9
             tag :my_italic,    :name => 'Hershey-Gothic-Italian-Oblique', :size => 10
           end
         end
@@ -143,8 +143,8 @@ module Brcobranca
           doc.show boleto.codigo_barras.linha_digitavel, :tag => :grande
           doc.moveto :x => '0.8 cm' , :y => '23 cm'
           doc.show boleto.cedente
-          #doc.moveto :x => '11 cm' , :y => '23 cm'
-          #doc.show boleto.agencia_conta_boleto
+          doc.moveto :x => '11 cm' , :y => '23 cm'
+          doc.show boleto.agencia_conta_boleto
           doc.moveto :x => '14.2 cm' , :y => '23 cm'
           doc.show boleto.especie
           doc.moveto :x => '15.7 cm' , :y => '23 cm'
@@ -181,8 +181,8 @@ module Brcobranca
           doc.show boleto.data_vencimento.to_s_br if boleto.data_vencimento
           doc.moveto :x => '0.7 cm' , :y => '15.2 cm'
           doc.show boleto.cedente
-          #doc.moveto :x => '16.5 cm' , :y => '15.2 cm'
-          #doc.show boleto.agencia_conta_boleto
+          doc.moveto :x => '16.5 cm' , :y => '15.2 cm'
+          doc.show boleto.agencia_conta_boleto
           doc.moveto :x => '0.7 cm' , :y => '14.4 cm'
           doc.show boleto.data_documento.to_s_br if boleto.data_documento
           doc.moveto :x => '4.2 cm' , :y => '14.4 cm'
@@ -216,7 +216,7 @@ module Brcobranca
           doc.moveto :x => '0.5 cm' , :y => '10.7 cm'
           doc.text '(art. 5º, II, IN 001/2015 - HEMOPI). A mora superior a 60 dias implicará na abertura de processo administrativo e'
           doc.moveto :x => '0.5 cm' , :y => '10.3 cm'
-          doc.text 'remessa dos autos à Procuradoria Geral do Estado para <bold>inscrição em dívida ativa, registro nos órgãos de </bold>'          
+          doc.text 'remessa dos autos à Procuradoria Geral do Estado para <bold>inscrição em dívida ativa, registro nos órgãos de </bold>'
           doc.moveto :x => '0.5 cm' , :y => '9.9 cm'
           doc.text '<bold>proteção ao crédito e ajuizamento de execução fiscal </bold> (art. 6º, inciso VI, IN 001/2015 – HEMOPI).'
           doc.moveto :x => '0.5 cm' , :y => '9.5 cm'
