@@ -97,7 +97,7 @@ module Brcobranca
       def numero_documento
         quantidade = case @convenio.to_s.size
         when 8
-          9
+          ''
         when 7
           10
         when 4
