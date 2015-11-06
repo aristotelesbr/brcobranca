@@ -148,8 +148,8 @@ module Brcobranca
           doc.moveto :x => '14.2 cm' , :y => '23 cm'
           doc.show boleto.especie
           doc.moveto :x => '15.7 cm' , :y => '23 cm'
-          doc.show boleto.quantidade
-          doc.moveto :x => '0.7 cm' , :y => '22.2 cm'
+          # doc.show boleto.quantidade
+          # doc.moveto :x => '0.7 cm' , :y => '22.2 cm'
           doc.show boleto.numero_documento
           doc.moveto :x => '7 cm' , :y => '22.2 cm'
           doc.show "#{boleto.documento_cedente.formata_documento}"
@@ -199,8 +199,8 @@ module Brcobranca
           doc.show boleto.carteira
           doc.moveto :x => '6.4 cm' , :y => '13.5 cm'
           doc.show boleto.especie
-          doc.moveto :x => '8 cm' , :y => '13.5 cm'
-          doc.show boleto.quantidade
+          # doc.moveto :x => '8 cm' , :y => '13.5 cm'
+          # doc.show boleto.quantidade
           # doc.moveto :x => '11 cm' , :y => '13.5 cm'
           # doc.show boleto.valor.to_currency
           doc.moveto :x => '16.5 cm' , :y => '13.5 cm'
