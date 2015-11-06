@@ -147,9 +147,9 @@ module Brcobranca
           doc.show boleto.agencia_conta_boleto
           doc.moveto :x => '14.2 cm' , :y => '23 cm'
           doc.show boleto.especie
-          doc.moveto :x => '15.7 cm' , :y => '23 cm'
+          # doc.moveto :x => '15.7 cm' , :y => '23 cm'
           # doc.show boleto.quantidade
-          # doc.moveto :x => '0.7 cm' , :y => '22.2 cm'
+          doc.moveto :x => '0.7 cm' , :y => '22.2 cm'
           doc.show boleto.numero_documento
           doc.moveto :x => '7 cm' , :y => '22.2 cm'
           doc.show "#{boleto.documento_cedente.formata_documento}"
