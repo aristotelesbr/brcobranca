@@ -113,17 +113,17 @@ module Brcobranca
       # Dígito verificador do nosso número.
       # @return [String] 1 caracteres numéricos.
       # @see BancoBrasil#numero_documento
-      def nosso_numero_dv
-        "#{self.convenio}#{self.numero_documento}".modulo11_9to2_10_como_x
-      end
+      # def nosso_numero_dv
+      #   "#{self.convenio}#{self.numero_documento}".modulo11_9to2_10_como_x
+      # end
 
-      # Nosso número para exibir no boleto.
-      # @return [String]
-      # @example
-      #  boleto.nosso_numero_boleto #=> "12387989000004042-4"
-      def nosso_numero_boleto
-        "#{self.convenio}#{self.numero_documento}-#{self.nosso_numero_dv}"
-      end
+      # # Nosso número para exibir no boleto.
+      # # @return [String]
+      # # @example
+      # #  boleto.nosso_numero_boleto #=> "12387989000004042-4"
+      # def nosso_numero_boleto
+      #   "#{self.convenio}#{self.numero_documento}-#{self.nosso_numero_dv}"
+      # end
 
       # Agência + conta corrente do cliente para exibir no boleto.
       # @return [String]
