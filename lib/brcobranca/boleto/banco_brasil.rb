@@ -8,25 +8,25 @@ module Brcobranca
       validates_length_of :carteira, :maximum => 2, :message => "deve ser menor ou igual a 2 dígitos."
       validates_length_of :convenio, :in => 4..8, :message => "não existente para este banco."
 
-      # validates_each :numero_documento do |record, attr, value|
-      #   valor_tamanho = value.to_s.size
-      #   registro_tamanho = record.convenio.to_s.size
-      #   quantidade = case
-      #   when (valor_tamanho > 9) && (registro_tamanho == 8)
-      #     '9'
-      #   when (valor_tamanho > 10) && (registro_tamanho == 7)
-      #     '10'
-      #   when (valor_tamanho > 7) && (registro_tamanho == 4)
-      #     '7'
-      #   when (valor_tamanho > 5) && (registro_tamanho == 6) && (!record.codigo_servico)
-      #     '5'
-      #   when (valor_tamanho > 17) && (registro_tamanho == 6) && (record.codigo_servico)
-      #     '17'
-      #   else
-      #     nil
-      #   end
-      #   record.errors.add attr, "deve ser menor ou igual a #{quantidade} dígitos." if quantidade
-      # end
+      validates_each :numero_documento do |record, attr, value|
+        valor_tamanho = value.to_s.size
+        registro_tamanho = record.convenio.to_s.size
+        quantidade = case
+        when (valor_tamanho > 9) && (registro_tamanho == 8)
+          '9'
+        when (valor_tamanho > 10) && (registro_tamanho == 7)
+          '10'
+        when (valor_tamanho > 7) && (registro_tamanho == 4)
+          '7'
+        when (valor_tamanho > 5) && (registro_tamanho == 6) && (!record.codigo_servico)
+          '5'
+        when (valor_tamanho > 17) && (registro_tamanho == 6) && (record.codigo_servico)
+          '17'
+        else
+          nil
+        end
+        record.errors.add attr, "deve ser menor ou igual a #{quantidade} dígitos." if quantidade
+      end
 
       # Nova instancia do BancoBrasil
       # @param (see Brcobranca::Boleto::Base#initialize)
