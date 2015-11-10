@@ -205,8 +205,8 @@ module Brcobranca
           # doc.show boleto.valor.to_currency
           doc.moveto :x => '16.5 cm' , :y => '13.5 cm'
           doc.show boleto.valor_documento.to_currency
-          doc.moveto :x => '0.5 cm' , :y => '12.7 cm'
-          doc.text '<bold>Sr. Caixa:</bold>'
+          # doc.moveto :x => '0.5 cm' , :y => '12.7 cm'
+          # doc.text '<bold>Sr. Caixa:</bold>'
           doc.moveto :x => '0.5 cm' , :y => '12.3 cm'
           doc.text '<bold> - Aplicar multa de 10% e juros de 1% ao mês após o vencimento (art. 5º, II, §1º, IN 001/2015 - HEMOPI).</bold>'
           doc.moveto :x => '0.5 cm' , :y => '11.9 cm'
